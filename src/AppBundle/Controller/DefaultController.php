@@ -14,7 +14,13 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return new JsonResponse("");
+        $warehouses = [
+            ['name' => 'Baneasa'],
+            ['name' => 'Crangasi'],
+        ];
+        return $this->render('niceAdminBootstrap/index.twig', [
+            'warehouses' => $warehouses
+        ]);
     }
 
     /**
