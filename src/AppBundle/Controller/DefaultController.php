@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -80,10 +81,11 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/admin-panel", name="admin-panel")
+     * @Route("/panel", name="admin-panel")
      */
     public function adminPaneltAction(Request $request)
     {
-        return new JsonResponse("");
+//        $form = new Form();
+        return $this->render('niceAdminBootstrap/params.html.twig');
     }
 }
