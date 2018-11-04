@@ -1,15 +1,15 @@
 {% block content %}
-    {{ include('niceAdminBootstrap/components/side_menu.twig') }}
+    {{ include('niceAdminBootstrap/components/wh_side_menu.twig', {'warehouses': warehouses}) }}
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Data Hazard">
+    <meta name="description" content="WH Admin">
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="niceAdminBootstrap/img/favicon.png">
 
-    <title>Data Hazard</title>
+    <title>WH Admin</title>
 
     <!-- Bootstrap CSS -->
     <link href="niceAdminBootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -68,7 +68,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
               <i class="fa fa-cloud-download"></i>
-              <div class="count">{{ statistics.cumulative.registered_users }}</div>
+              <div class="count">{{ 99 }}</div>
               <div class="title">Registered Users</div>
             </div>
             <!--/.info-box-->
@@ -78,7 +78,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
               <i class="fa fa-shopping-cart"></i>
-              <div class="count">{{ statistics.cumulative.active_users }}</div>
+              <div class="count">{{ 99 }}</div>
               <div class="title">Active Users</div>
             </div>
             <!--/.info-box-->
@@ -88,7 +88,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
               <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">{{ statistics.cumulative.user_confirmed_warnings }}</div>
+              <div class="count">{{ 99 }}</div>
               <div class="title">User Confirmed Warnings</div>
             </div>
             <!--/.info-box-->
@@ -98,7 +98,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
               <i class="fa fa-cubes"></i>
-              <div class="count">{{ statistics.cumulative.api_confirmed_warnings }}</div>
+              <div class="count">{{ 99 }}</div>
               <div class="title">API Confirmed Warnings</div>
             </div>
             <!--/.info-box-->
@@ -117,47 +117,47 @@
               <!-- Graph -->
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div><span id="todayspark1" class="spark"></span></div>
-              <div id="todayspark1-data1" class="hidden">{{ statistics.weekly.new_users.byDay.monday }}</div>
-              <div id="todayspark1-data2" class="hidden">{{ statistics.weekly.new_users.byDay.tuesday }}</div>
-              <div id="todayspark1-data3" class="hidden">{{ statistics.weekly.new_users.byDay.wednesday }}</div>
-              <div id="todayspark1-data4" class="hidden">{{ statistics.weekly.new_users.byDay.thursday }}</div>
-              <div id="todayspark1-data5" class="hidden">{{ statistics.weekly.new_users.byDay.friday }}</div>
-              <div id="todayspark1-data6" class="hidden">{{ statistics.weekly.new_users.byDay.saturday }}</div>
-              <div id="todayspark1-data7" class="hidden">{{ statistics.weekly.new_users.byDay.sunday }}</div>
+              <div id="todayspark1-data1" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data2" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data3" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data4" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data5" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data6" class="hidden">{{ 99 }}</div>
+              <div id="todayspark1-data7" class="hidden">{{ 99 }}</div>
               <!-- Text -->
-              <div class="datas-text">{{ statistics.weekly.new_users.total }} new users</div>
+              <div class="datas-text"99 }} new users</div>
           </div>
             {#</li>#}
             {#<li>#}
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div><span id="todayspark2" class="spark"></span></div>
-              <div id="todayspark2-data1" class="hidden">{{ statistics.weekly.user_warnings.byDay.monday }}</div>
-              <div id="todayspark2-data2" class="hidden">{{ statistics.weekly.user_warnings.byDay.tuesday }}</div>
-              <div id="todayspark2-data3" class="hidden">{{ statistics.weekly.user_warnings.byDay.wednesday }}</div>
-              <div id="todayspark2-data4" class="hidden">{{ statistics.weekly.user_warnings.byDay.thursday }}</div>
-              <div id="todayspark2-data5" class="hidden">{{ statistics.weekly.user_warnings.byDay.friday }}</div>
-              <div id="todayspark2-data6" class="hidden">{{ statistics.weekly.user_warnings.byDay.saturday }}</div>
-              <div id="todayspark2-data7" class="hidden">{{ statistics.weekly.user_warnings.byDay.sunday }}</div>
-              <div class="datas-text">{{ statistics.weekly.user_warnings.total }} user warnings</div>
+              <div id="todayspark2-data1" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data2" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data3" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data4" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data5" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data6" class="hidden">{{ 99 }}</div>
+              <div id="todayspark2-data7" class="hidden">{{ 99 }}</div>
+              <div class="datas-text">{{ 99 }} user warnings</div>
           </div>
             {#</li>#}
             {#<li>#}
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div><span id="todayspark3" class="spark"></span></div>
-              <div id="todayspark3-data1" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.monday }}</div>
-              <div id="todayspark3-data2" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.tuesday }}</div>
-              <div id="todayspark3-data3" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.wednesday }}</div>
-              <div id="todayspark3-data4" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.thursday }}</div>
-              <div id="todayspark3-data5" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.friday }}</div>
-              <div id="todayspark3-data6" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.saturday }}</div>
-              <div id="todayspark3-data7" class="hidden">{{ statistics.weekly.confirmed_user_warnings.byDay.sunday }}</div>
-              <div class="datas-text">{{ statistics.weekly.confirmed_user_warnings.total }} confirmed user warnings</div>
+              <div id="todayspark3-data1" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data2" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data3" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data4" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data5" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data6" class="hidden">{{ 99 }}</div>
+              <div id="todayspark3-data7" class="hidden">{{ 99 }}</div>
+              <div class="datas-text">{{ 99 }} confirmed user warnings</div>
           </div>
             {#</li>#}
             {#<li>#}
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div><span id="todayspark4" class="spark"></span></div>
-              <div class="datas-text">{{ statistics.weekly.warnings_honesty }}% warning honesty</div>
+              <div class="datas-text">{{ 99 }}% warning honesty</div>
           </div>
             {#</li>#}
           {#</ul>#}
