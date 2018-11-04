@@ -5,7 +5,7 @@
         <ul class="sidebar-menu">
             {% for warehouse in warehouses %}
                 <li class="active">
-                    <a class="" href="/">
+                    <a class="" href="{{ path('warehouse', {'id': warehouse.id}) }}">
                         <i class="icon_house_alt"></i>
                         <span>{{ warehouse.name }}</span>
                     </a>

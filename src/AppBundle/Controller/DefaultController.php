@@ -15,8 +15,14 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $warehouses = [
-            ['name' => 'Baneasa'],
-            ['name' => 'Crangasi'],
+            [
+                'id' => 1,
+                'name' => 'Baneasa'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Crangasi'
+            ],
         ];
         return $this->render('niceAdminBootstrap/index.twig', [
             'warehouses' => $warehouses
@@ -28,7 +34,7 @@ class DefaultController extends Controller
      */
     public function warehouseAction(Request $request)
     {
-        return new JsonResponse("");
+        return new JsonResponse('');
     }
 
     /**
@@ -36,7 +42,11 @@ class DefaultController extends Controller
      */
     public function shipmentListAction(Request $request)
     {
-        return new JsonResponse("");
+        $shipments = [];
+        return $this->render('niceAdminBootstrap/shipments.html.twig', [
+            'parent_warehouse' => 1,
+           'shipments' => $shipments
+        ]);
     }
 
     /**
@@ -49,10 +59,16 @@ class DefaultController extends Controller
 
     /**
      * @Route("/warehouse/{warehouse_id}/orders", name="orders-list")
+     * @Route("/warehouse/{warehouse_id}/shipment/{shipment_id}/orders", name="shipment-orders-list")
      */
     public function orderListAction(Request $request)
     {
-        return new JsonResponse("");
+        $orders = [];
+        return $this->render('niceAdminBootstrap/orders.html.twig', [
+            'parent_shipment'  => $request->get('shipment_id'),
+            'parent_warehouse' => $request->get('shipment_id'),
+            'orders'           => $orders
+        ]);
     }
 
     /**
