@@ -85,7 +85,6 @@ class DefaultController extends Controller
      */
     public function adminPaneltAction(Request $request)
     {
-//        $form = new Form();
-        return $this->render('niceAdminBootstrap/params.html.twig');
+        return $this->render('niceAdminBootstrap/panel.html.twig');
     }
 }
